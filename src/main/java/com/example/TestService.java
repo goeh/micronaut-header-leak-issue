@@ -23,7 +23,7 @@ public class TestService {
         this.client = client;
     }
 
-    @Scheduled(initialDelay = "15s", fixedDelay = "30s")
+    @Scheduled(initialDelay = "15s", fixedDelay = "15s")
     public void clientRequest() {
         // Get data from remote service
         client.getData(TENANT)
