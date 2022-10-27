@@ -1,0 +1,41 @@
+micronaut:
+  application:
+    name: demo
+  security:
+    authentication: cookie
+    token:
+      jwt:
+        bearer:
+          enabled: true
+      propagation:
+        enabled: true
+        service-id-regex: ".*"
+  multitenancy:
+    propagation:
+      enabled: true
+      service-id-regex: ".*"
+    tenantwriter:
+      httpheader:
+        enabled: true
+        header-name: X-Tenant
+    tenantresolver:
+      httpheader:
+        enabled: true
+        header-name: X-Tenant
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+        descriptions: true
+        step: PT1M
+    enabled: true
+endpoints:
+  prometheus:
+    sensitive: false
+netty:
+  default:
+    allocator:
+      max-order: 3
+logger:
+  levels:
+    io.micronaut.http.client: INFO
