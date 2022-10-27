@@ -1,5 +1,7 @@
 ## Micronaut 3.7.2 Issue reproducer
 
+https://github.com/micronaut-projects/micronaut-multitenancy/issues/143
+
 Run the application
 
     ./gradlew run
