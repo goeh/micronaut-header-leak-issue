@@ -1,9 +1,9 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
-    id("io.micronaut.application") version "3.6.2"
+    id("io.micronaut.application") version "3.6.7"
 }
 
-version = "0.1"
+version = "0.2"
 group = "com.example"
 
 repositories {
